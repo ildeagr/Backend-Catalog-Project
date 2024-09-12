@@ -31,15 +31,15 @@ public class CatalogoController {
 		return productoService.findAll();
 	}
 	
-	/*  Ejemplo de otras operacions posibles de Hibernate
+	// Ejemplo de otras operacions posibles de Hibernate
 	@DeleteMapping("/users/{id}") 
 	public void deleteUser(@PathVariable("id") String id) { 
-		// Delete the user in this method with the id.  
+		 
 	}
 	
 	@PutMapping("/users/{id}") 
 	public void updateUser(@PathVariable("id") String id, @RequestBody User user) { 
-	        // Update the user details here 
-	}*/
+	       
+	}
 	
 }

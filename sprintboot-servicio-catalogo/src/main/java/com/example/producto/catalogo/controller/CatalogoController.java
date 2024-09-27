@@ -26,6 +26,7 @@ public class CatalogoController {
 		return productoService.findAll();
 	}
 	
+<<<<<<< HEAD
 	// Peticion Delete para eliminar un elemento de la base de datos a través de su Id
 	@DeleteMapping("/item/delete/{id}")
 	public String deleteItem(@PathVariable("id") Long id) { 
@@ -39,3 +40,17 @@ public class CatalogoController {
 	}
 	
 }
+=======
+	// Ejemplo de otras operacions posibles de Hibernate
+	@DeleteMapping("/users/{id}") 
+	public void deleteUser(@PathVariable("id") String id) { 
+		 
+	}
+	
+	@PutMapping("/users/{id}") 
+	public void updateUser(@PathVariable("id") String id, @RequestBody User user) { 
+	       
+	}
+	
+}
+>>>>>>> refs/remotes/origin/main

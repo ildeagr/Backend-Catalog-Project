@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.producto.catalogo.mensaje.ProductoMarca;
-import com.example.producto.catalogo.mensaje.ProductoMensaje;
 import com.example.producto.catalogo.servicio.IProductoServicio;
 
 @RestController
@@ -21,25 +20,22 @@ public class CatalogoController {
 	@Autowired
 	private IProductoServicio productoService;
 	
-	@GetMapping("/saludos")
-	public ProductoMensaje mostrarmensaje() {
-		return productoService.mensajeback();
-	  }
-	
-	@GetMapping("/listar")
-	public List<ProductoMarca> seleccion(){
+	//Peticion Get para ver listado completo de la base de datos
+	@GetMapping("/list")
+	public List<ProductoMarca> listItems(){
 		return productoService.findAll();
 	}
 	
-	/*  Ejemplo de otras operacions posibles de Hibernate
-	@DeleteMapping("/users/{id}") 
-	public void deleteUser(@PathVariable("id") String id) { 
-		// Delete the user in this method with the id.  
+	// Peticion Delete para eliminar un elemento de la base de datos a través de su Id
+	@DeleteMapping("/item/delete/{id}")
+	public String deleteItem(@PathVariable("id") Long id) { 
+		 return productoService.deleteItem(id);
 	}
-	
-	@PutMapping("/users/{id}") 
-	public void updateUser(@PathVariable("id") String id, @RequestBody User user) { 
-	        // Update the user details here 
-	}*/
+
+	//Modificar Put un elemento de la base de datos por su Id
+	@PutMapping("/item/{id}") 
+	public String updateItem(@PathVariable("id") Long id, @RequestBody ProductoMarca productomarca) { 
+	       return productoService.updateItem(id, productomarca);
+	}
 	
 }

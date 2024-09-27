@@ -19,6 +19,23 @@ public class ProductoMarca implements Serializable{
 	private Integer precio;
 	private String articulo;
 	
+	public ProductoMarca() {
+
+	}
+
+	public ProductoMarca(Long id, String nombre, Integer precio, String articulo) {
+		this.id = id;
+		this.nombre = nombre;
+		this.precio = precio;
+		this.articulo = articulo;
+	}
+
+	public Long getId() {
+		return id;
+	}
+	public void setId(Long id) {
+		this.id = id;
+	}
 	public String getNombre() {
 		return nombre;
 	}

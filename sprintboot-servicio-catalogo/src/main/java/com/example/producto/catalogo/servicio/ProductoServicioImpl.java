@@ -1,6 +1,7 @@
 package com.example.producto.catalogo.servicio;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Example;
@@ -9,7 +10,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.example.producto.catalogo.dao.ProductoDao;
 import com.example.producto.catalogo.mensaje.ProductoMarca;
-import com.example.producto.catalogo.mensaje.ProductoMensaje;
 
 
 
@@ -19,18 +19,43 @@ public class ProductoServicioImpl implements IProductoServicio{
 	@Autowired
 	private ProductoDao productodao;
 	
-	@Override
-	public ProductoMensaje mensajeback() {
-		ProductoMensaje mensaje=new ProductoMensaje();
-		mensaje.setMensaje("Hola Mundo");
-		
-		return mensaje;
-	}
 
 	@Override
 	@Transactional(readOnly = true) 
 	public List<ProductoMarca> findAll() {
 		return (List<ProductoMarca>) productodao.findAll();
+	}
+
+
+	@Override
+	public String deleteItem(Long id) {
+		String result;
+		Optional<ProductoMarca> found = productodao.findById(id);
+		
+		if(found.isEmpty()) result= "Item no encontrado";
+
+		else {
+			productodao.deleteById(id);
+			result = "Item eliminado con exito";
+		}
+
+		return result;
+	}
+
+
+	@Override
+	public String updateItem(Long id, ProductoMarca productomarca) {
+		String result;
+		Optional<ProductoMarca> found = productodao.findById(id);
+		
+		if(found.isEmpty()) result= "Item no encontrado";
+
+		else {
+			productodao.save(productomarca);
+			result = "Item Modificado";
+		}
+		
+		return result;
 	}
 
 }

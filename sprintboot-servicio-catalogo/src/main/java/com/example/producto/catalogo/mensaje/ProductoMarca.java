@@ -9,7 +9,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table (name="marcas")
+@Table (name="marca")
 public class ProductoMarca implements Serializable{
 	
 	@Id

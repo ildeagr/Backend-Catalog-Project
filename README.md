@@ -1,6 +1,6 @@
 # Proyecto Gestión de Catálogo (Backend Spring Boot)
 ## Objetivo:
-Desarrollar un microservicio con Spring Boot para gestiona un catálogo de productos en una base de datos MySQL. Permite a las aplicaciones enviar peticiones @get, @put, @post y @delete sobre la base de datos de manera eficiente y segura, realizando consultas, modificaciones o ampliaciones del catalogo de productos.
+Desarrollar un microservicio con Spring Boot para gestiona un catálogo de productos en una base de datos MySQL. Permite a las aplicaciones enviar peticiones @get, @put, @post y @delete sobre la base de datos de manera eficiente y segura, realizando consultas, modificaciones o ampliaciones del catálogo de productos.
 
 ## Sobre mi participacion y Logros:
 He desarrollado en su totalidad esta parte de backend con Spring Boot y MySQL. Esto me ha ayudado a conseguir:
@@ -15,7 +15,7 @@ He desarrollado en su totalidad esta parte de backend con Spring Boot y MySQL. E
 A continuación mostraremos algunos resultados de algunas peticiones desarrolladas en el microservicio. Estos resultados están testeados con Postman, lo único que hacemos es indicar el tipo de petición (get, post, delete...) y la Url programada para cada una de ellas. Al enviar la petición Postman muestra el resultado devuelto por el microservicio.
 
 ## Peticion Get
-En la primera imagen solicitamos que nos devuelva el contenido completo de la base de datos consultada. Por otro lado, podemoste indicar el "id" del artículo, y el microservicio nos devolverá la información unicamente de ese identificador si existe en la base de datos.
+En la primera imagen solicitamos que nos devuelva el contenido completo de la base de datos consultada. Por otro lado, podemos indicar el "id" del artículo, y el microservicio nos devolverá la información únicamente de ese identificador si existe en la base de datos.
 
 ![Captura de pantalla 2024-10-16 a las 10 29 54](https://github.com/user-attachments/assets/b641ad1c-378a-4bb3-b1db-49b74938b15a)
 

@@ -20,9 +20,9 @@ En la primera imagen solicitamos que nos devuelva el contenido completo de la ba
 
 Por otro lado, si indicamos el "id" del artículo, el microservicio nos devolverá la información unicamente de ese identificador si existe en la base de datos.
 
-# Petición Post
+## Petición Post
 Esta petición lo que hace es crear un artículo nuevo con la información del "Body" que le pasemos. En este caso como el "id" es el identificador único de la tabla y se genera de forma automática no se indica en el "Body" del nuevo artículo, por lo que, no aseguramos de que no existen duplicados del mismo.
 
-# Peticion Delete y Push
+## Peticion Delete y Push
 La peticion delete, como se puede deducir, sería para poder eliminar un artículo de la base de datos, y la petición push, nos dejaría modificar algún campo del artículo indicado por el id. Para realizar la modificación debemos pasarle un "Body" completo incluido el "id" para que podemos buscarlo y modificarlo en la base de datos. EL video siguiente muestra un ejemplo de ambas peticiones incluso de la petición Get para mostrar que los cambios en la base de datos se realizan correctamente.
 

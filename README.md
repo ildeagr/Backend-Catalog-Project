@@ -1,7 +1,6 @@
 # Proyecto Gestión de Catálogo (Backend Spring Boot)
 ## Objetivo:
-Proyecto propio de desarrollo de "Microservicio Catálogo" (Java/Spring Boot): API RESTful que gestiona un catálogo de productos en una base de datos MySQL. Permite a las aplicaciones enviar peticiones
-@get, @put, @post y @delete sobre la base de datos de manera eficiente y segura, realizando consultas, modificaciones o ampliaciones del catalogo de productos.
+Desarrollar un microservicio con Spring Boot para gestiona un catálogo de productos en una base de datos MySQL. Permite a las aplicaciones enviar peticiones @get, @put, @post y @delete sobre la base de datos de manera eficiente y segura, realizando consultas, modificaciones o ampliaciones del catalogo de productos.
 
 ## Sobre mi participacion y Logros:
 He desarrollado en su totalidad esta parte de backend con Spring Boot y MySQL. Esto me ha ayudado a conseguir:

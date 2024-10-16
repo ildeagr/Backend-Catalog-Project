@@ -26,6 +26,13 @@ Esta petición lo que hace es crear un artículo nuevo con la información del "
 ![Captura de pantalla 2024-10-16 a las 13 03 42](https://github.com/user-attachments/assets/d96f2d50-882b-48bb-95f6-261f5dd60a91)
 
 ## Peticion Delete y Push
-La peticion delete, como se puede deducir, sería para poder eliminar un artículo de la base de datos, y la petición push, nos dejaría modificar algún campo del artículo indicado por el id. Para realizar la modificación debemos pasarle un "Body" completo incluido el "id" para que podemos buscarlo y modificarlo en la base de datos. EL video siguiente muestra un ejemplo de ambas peticiones incluso de la petición Get para mostrar que los cambios en la base de datos se realizan correctamente.
+La peticion delete, como se puede deducir, sería para poder eliminar un artículo de la base de datos, y la petición push, nos dejaría modificar algún campo del artículo indicado por el id. Para realizar la modificación debemos pasarle un "Body" completo incluido el "id" para que podemos buscarlo y modificarlo en la base de datos.
+
+El video siguiente muestra un ejemplo de ambas peticiones. Explicación de los pasos en el vídeo:
+
+1. Realizamos una petición Get para ver la tabla completa de artículos.
+2. Enviamos la petición Put para modificar el precio del artículo "id" número dos.
+3. Vemos el cambio de nuevo con Get y verificamos que se ha modificado el precio.
+4. Por último, realizamos una petición Delete en el artículo y verificamos que ha sido eliminado el artículo dos tal como indicamos.
 
 https://github.com/user-attachments/assets/ca0af267-1a15-49a8-afdd-b6a484a957ad
